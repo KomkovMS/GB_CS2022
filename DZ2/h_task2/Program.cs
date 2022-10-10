@@ -8,6 +8,8 @@
 
 */
 
+// мое решение
+
 void getNumThree(int num)
 {
     if (num > 10000)
@@ -43,3 +45,29 @@ void getRandomNum(int start, int end)
 
 
 getRandomNum(1, 99999);
+
+// Решение преподавателя на семинаре 3
+Console.WriteLine("\n------------------------------");
+
+void hasThirdNumber(int x) {
+    int div = 1;
+    while (x / div >= 10) {
+        div *= 10;
+    }
+
+    if (div < 100) {
+        Console.Write("\nToo little number");
+    } 
+    else {
+        // last number of x / (div / 100)    123456
+        int digit = (x / (div/100)) % 10;
+        Console.WriteLine("Third is {0}", digit);
+    }
+}
+
+hasThirdNumber(12);
+hasThirdNumber(123);
+hasThirdNumber(1234);
+hasThirdNumber(12345);
+hasThirdNumber(123456);
+hasThirdNumber(975431982);
