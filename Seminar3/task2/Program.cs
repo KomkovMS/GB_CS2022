@@ -11,7 +11,16 @@ void outputNum(string message)
 {
     Console.Write(message);
     int num = Convert.ToInt32(Console.ReadLine());
-    getPoint(num);
+
+    while (true)
+    {
+        if (num >= 5) Console.WriteLine("Такой четверти не существует");
+    } else {
+        getPoint(num);
+        break;
+    }
+
+    
 }
 
 
