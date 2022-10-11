@@ -118,16 +118,32 @@ Console.WriteLine(GetSquare3(5));
 
 Console.WriteLine("\n--------------------------");
 
-int v;
-string data = "12ыв3";
+// Задача - ввести значения от 10 до 20
 
-bool flag = int.TryParse(data, out v);
-if (flag)
+static int GetData(string text)
 {
-    Console.WriteLine(v);
+    int v = -1;
+    bool flag = false; 
+
+    while(!(flag && v>= 10 && v <= 20))
+    {
+        Console.Write(text);
+        string data = Console.ReadLine();
+        flag = int.TryParse(data, out v);
+    }
+    return v;
 }
-else
-{
-    Console.WriteLine("Данные кривые");
-}
+
+GetData("Enter the value: ");
+
+
+
+// if (flag)
+// {
+//     Console.WriteLine(v);
+// }
+// else
+// {
+//     Console.WriteLine("Данные кривые");
+// }
 
