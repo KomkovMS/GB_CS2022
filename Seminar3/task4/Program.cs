@@ -62,5 +62,72 @@ int[] res = getArray(number);
 // тоже самое с помощью цикла while
 
 
+// решение на семинаре доп
 
+
+// решение 1
+Console.WriteLine("\n--------------------------");
+
+void GetSquare1(int n)
+{
+    int i = 1;
+    while (i <= n)
+    {
+        Console.WriteLine(i*i);
+        i++;
+    }
+}
+
+
+// решение 2
+int[] GetSquare2(int n)
+{
+    int i = 0;
+    int[] squeres = new int[n];
+    while (i < n)
+    {
+        squeres[i] = (i + 1) * (i + 1);
+        i++;
+    }
+    return squeres;
+}
+
+// решение 3
+string GetSquare3(int n)
+{
+    int i = 1;
+    string res = String.Empty;
+    while (i <= n)
+    {
+        res += Convert.ToString(i * i) + " ";
+        i++;
+    }
+    return res;
+}
+
+ int n = 5;
+
+GetSquare1(n);
+Console.WriteLine("\n--------------------------");
+Console.WriteLine(String.Join(" ", GetSquare2(n)));
+Console.WriteLine("\n--------------------------");
+Console.WriteLine(GetSquare3(5));
+
+
+// а как сделать проверку что введено именно число, а не буквы?
+
+Console.WriteLine("\n--------------------------");
+
+int v;
+string data = "12ыв3";
+
+bool flag = int.TryParse(data, out v);
+if (flag)
+{
+    Console.WriteLine(v);
+}
+else
+{
+    Console.WriteLine("Данные кривые");
+}
 
