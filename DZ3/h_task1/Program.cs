@@ -8,6 +8,9 @@
 23432 -> да
 */
 
+
+// Вариант 1
+
 void MyCheck(int num)
 {
     int firstNum = num / 10000;
