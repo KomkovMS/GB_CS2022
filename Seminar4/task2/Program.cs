@@ -28,3 +28,27 @@ Console.WriteLine(msg);
 int num = Convert.ToInt32(Console.ReadLine());
 Console.Write(" -> ");
 Console.Write(getCountNum(msg, num));
+
+
+// решение на семинаре
+
+int DigCount(int N)
+{
+    int result = 0;
+    int div = 1;
+    while ((N / div) >= 1)
+    {
+        div *= 10;
+        result++;
+    }
+
+    Console.WriteLine(result);
+    return result;
+}
+
+Console.WriteLine("\n===============================");
+DigCount(3);
+DigCount(34);
+DigCount(355);
+DigCount(3666);
+DigCount(37891);
