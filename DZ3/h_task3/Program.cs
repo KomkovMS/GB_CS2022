@@ -27,3 +27,20 @@ Console.Write("-> ");
 
 getCube(msg, num);
 
+
+// вариант решения преподавателя на семинаре 4
+
+int[] cubes = ()
+{
+    Console.WriteLine("Введите число");
+    int N = Convert.ToInt32(Console.ReadLine());
+    int[] result = new int[N];
+
+    for (int i = 1; i <= N; i++)
+    {
+        result[i] = i * i * i;
+    }
+
+    return result;
+}
+
