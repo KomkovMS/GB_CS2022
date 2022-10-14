@@ -10,13 +10,13 @@
 
 int getmult(string msg, int num)
 {
-    int sum = 1;
+    int mult = 1;
     for (int idx = 1; idx <= num; idx++)
     {
-        sum *= idx; 
+        mult *= idx; 
     }
 
-    return sum;
+    return mult;
 }
 
 
@@ -25,3 +25,5 @@ Console.WriteLine(msg);
 int num = Convert.ToInt32(Console.ReadLine());
 Console.Write(" -> ");
 Console.Write(getmult(msg, num));
+
+// решение на семинаре (аналогичное)
