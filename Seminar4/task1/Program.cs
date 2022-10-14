@@ -27,3 +27,6 @@ int num = Convert.ToInt32(Console.ReadLine());
 Console.Write(" -> ");
 Console.Write(getSum(msg, num));
 
+// решение на семинаре (преподавателя)
+
+// аналогичное
