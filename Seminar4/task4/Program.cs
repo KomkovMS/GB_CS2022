@@ -55,12 +55,9 @@ void FillArray(int[] collection)
 // метод, который печатает массив
 void PrintArray(int[] col)
 {
-  int count = col.Length;
-  int position = 0;
-  while (position < count)
+  for (int index = 0; index < col.Length; index++)
   {
-    Console.Write(col[position]);
-    position++;
+    Console.Write(col[index]);
   }
 }
  
