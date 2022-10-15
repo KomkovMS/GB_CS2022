@@ -7,13 +7,38 @@
 
 // мое решение 1
 
-int[] arr = new int[8];
-
-for (int i = 0; i < 8; i++)
+int getArray()
 {
-    arr[i] = new Random().Next(0, 2);
-    Console.Write(arr[i]);              // 10100010
+    int[] arr = new int[8];
+
+    for (int i = 0; i < arr.Length; i++)
+    {
+        arr[i] = new Random().Next(0, 2);
+        Console.Write(arr[i]);              // 10100010
+    }
+
+    return arr.Length;  // непонятно что и зачем здесь возвращать, длину (для примера взял)
 }
+
+getArray();
+
+
+// мое решение 1.1
+Console.WriteLine("\n--------------------------------");
+
+void getArr()
+{
+    int[] arr = new int[8];
+
+    for (int i = 0; i < arr.Length; i++)
+    {
+        arr[i] = new Random().Next(0, 2);
+        Console.Write(arr[i]);              
+    }
+}
+
+getArr();
+
 
 // мое решение 2
 Console.WriteLine("\n--------------------------------");
