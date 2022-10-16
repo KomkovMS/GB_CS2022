@@ -39,3 +39,15 @@ void PrintArray(int[] col)
 int[] array = new int[8];
 FillArray(array, 1, 50);
 PrintArray(array);
+
+// решение на семинаре 5 от преподавателя
+Console.WriteLine("\n------------------------");
+
+int Length = 8;
+int[] digitsArr = new int[Length];
+Random rand = new Random();
+
+for (int i = 0; i < Length; i++) {
+    digitsArr[i] = rand.Next(-100, 100);
+    Console.Write(digitsArr[i] + " ");
+}
