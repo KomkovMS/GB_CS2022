@@ -15,7 +15,7 @@ int NumSun(int a)
     while (a > 0)
     {
         sum += a % 10;
-        a = a / 10;
+        a /= 10;
     }
 
     return sum;
