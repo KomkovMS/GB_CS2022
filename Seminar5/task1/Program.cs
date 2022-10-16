@@ -50,3 +50,25 @@ void PrintResult(int[] Arr, int sumPlus, int sumMinus)
 int[] array = new int[12];
 FillArray(array, -9, 9);
 GetSumMinusAndPlus(array);
+
+
+// решение на семинаре  = от преподавателя
+Console.WriteLine("\n------------------------");
+
+int length = 12;
+int[] newArr = new int[length];
+Random rnd = new Random();
+int positivesSum = 0;
+int negativesSum = 0;
+
+for (int i = 0; i < length; i++) {
+    newArr[i] = rnd.Next(-10, 10);
+    if (newArr[i] > 0) positivesSum += newArr[i];
+    else if (newArr[i] < 0) negativesSum += newArr[i];
+}
+
+var str = string.Join(", ", newArr);
+
+Console.WriteLine($"В массиве [{str}] "
+                  + $"сумма положительных чисел равна {positivesSum}, "
+                  + $"сумма отрицательных равна {negativesSum}");
