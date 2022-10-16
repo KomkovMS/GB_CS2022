@@ -11,18 +11,24 @@
 */
 
 // мое решение 2
-Console.WriteLine("\n------------------------------");
+
+void FillArray(int[] collection, int min, int max)
+{
+  for (int index = 0; index < collection.Length; index++)
+  {
+    collection[index] = new Random().Next(min, max);
+  }
+}
 
 int[] FillArr(int[] collection, int min, int max)
 {
-    int[] newArray = collection;
-
-    for (int index = min; index < max; index++)
+    for (int index = 0; index < collection.Length; index++)
     {
-        newArray[index] += 1;
+        collection[index] = min;
+        min++;
     }
 
-    return newArray;
+    return collection;
 }
 
 int FindElem(int[] col, int[] collection)
@@ -42,10 +48,15 @@ int FindElem(int[] col, int[] collection)
     return result;
 }
 
+int[] array = new int[123];
+FillArray(array, 1, 1000);
+
 
 int[] Arr = new int[90];
+var strArray = string.Join(", ", array);
 int[] fillArr = FillArr(Arr, 10, 100);
-Console.WriteLine(fillArr);
-// Console.WriteLine();
-// int amountOfElem = FindElem(newArray, Arr);
-// Console.WriteLine($"[{strArray}] -> {amountOfElem}");
+
+var str = string.Join(", ", Arr);
+
+int amountOfElem = FindElem(array, Arr);
+Console.WriteLine($"[{strArray}] -> {amountOfElem}");
