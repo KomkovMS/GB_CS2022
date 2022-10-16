@@ -36,3 +36,14 @@ void PrintNum(int num1, int num2)
 
 EnterNum("Enter number: ");
 
+
+// решение преподавателя на семинаре 5
+
+double usePow (int A, int B) {
+    double result = Math.Pow(A, B);
+
+    return result;
+}
+
+Console.WriteLine ($"\n-> {usePow(3,5)}");
+Console.WriteLine ($"-> {usePow(2,4)}");
