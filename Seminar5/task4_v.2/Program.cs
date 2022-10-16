@@ -12,6 +12,7 @@
 
 // мое решение 2
 
+// метод генерации массива из 123 элементов случайными числами
 void FillArray(int[] collection, int min, int max)
 {
   for (int index = 0; index < collection.Length; index++)
@@ -20,6 +21,7 @@ void FillArray(int[] collection, int min, int max)
   }
 }
 
+// метод генерации массива из последовательных чисел в отрезке [10,99] 
 int[] FillArr(int[] collection, int min, int max)
 {
     for (int index = 0; index < collection.Length; index++)
@@ -31,6 +33,7 @@ int[] FillArr(int[] collection, int min, int max)
     return collection;
 }
 
+// метод сравнения элементов двух массивов на совпадение чисел двойным циклом
 int FindElem(int[] col, int[] collection)
 {
     int result = 0;
@@ -49,14 +52,17 @@ int FindElem(int[] col, int[] collection)
 }
 
 int[] array = new int[123];
+
 FillArray(array, 1, 1000);
 
+var strArray = string.Join(", ", array);
 
 int[] Arr = new int[90];
-var strArray = string.Join(", ", array);
+
 int[] fillArr = FillArr(Arr, 10, 100);
 
 var str = string.Join(", ", Arr);
 
 int amountOfElem = FindElem(array, Arr);
+
 Console.WriteLine($"[{strArray}] -> {amountOfElem}");
