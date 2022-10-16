@@ -39,3 +39,21 @@ void PrintNum(int num)
 EnterNum("Enter the number: ");
 
 
+// решение на семинаре 5 от преподавателя
+Console.Write("\n------------------------");
+
+int digitsSum(int A) {
+    int summ = 0;
+    while (A != 0) {
+        summ += A % 10;
+        A = A / 10;
+    }
+
+    Console.Write("\n" + summ);
+
+    return summ;
+}
+
+int summ = digitsSum(452);
+digitsSum(17);
+digitsSum(171);
