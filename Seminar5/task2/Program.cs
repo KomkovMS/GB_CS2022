@@ -27,4 +27,6 @@ int[] newArr = GetReplacingElemOfArray(array);
 var strNewArr = string.Join(", ", newArr);
 Console.Write($"[{strArray}] -> [{strNewArr}]");
 
+// решение на семинаре
 
+// аналогичное
