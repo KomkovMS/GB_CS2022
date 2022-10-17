@@ -8,16 +8,43 @@
 
 */
 
-// мое решение
+// мое решение :-((
+
+// 
 
 
-int[] arr = new int[4] {6, 7, 3, 6};
+// решение на семинаре
 
-int[] arrNew = new int[]{0, 0, 0, 0};
+int length = 5;
+int[] newArr = new int[5]{1, 2, 3, 4, 5};
+int resultLength = 0;
+
+// если длина массива четная
+if (length % 2 == 0) {
+    resultLength = length / 2;
+} else {
+    resultLength = length / 2 + 1;
+}
+
+int[] result = new int[resultLength];
+
+for (int i = 0; i < length / 2; i++) {
+    result[i] = newArr[i] * newArr[length - i - 1];
+}
+
+// получение середины при нечетной длине
+if (length % 2 != 0) {
+    result[resultLength - 1] = newArr[length / 2];
+}
 
 
+// печать резульата
+for (int i = 0; i < newArr.Length; i++) {
+    Console.Write(newArr[i] + " ");
+}
 
-for (int i = 1; i < arr.Length; i++)
-{
-    arrNew[i] = arr[i] * arr[-i];
+Console.Write("-> ");
+
+for (int i = 0; i < resultLength; i++) {
+    Console.Write(result[i] + " ");
 }
