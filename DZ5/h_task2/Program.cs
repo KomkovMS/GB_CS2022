@@ -63,3 +63,22 @@ int res = getSunEvenNumber(newArray);
 Console.Write(res);
 
 
+// решение преподавателя на семинаре
+
+Console.WriteLine("\n---------------------------");
+
+int N = 10;
+int[] arr = new int[N];
+Random rand = new Random();
+int summ = 0;
+
+for (int j = 0; j < N; j++)
+{
+  arr[j] = rand.Next(100, 1000);
+  if (j % 2 == 0) 
+  {
+    summ += arr[j];
+  }
+}
+
+Console.WriteLine(summ);
