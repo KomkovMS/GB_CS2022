@@ -54,12 +54,31 @@ int[] getConvert(int[] arr, int sizeArr)
 int sizeArr = GetSizeArr(1, 10);
 int[] array = new int[sizeArr];
 int[] newArray = FillArray(array, 1, 100);
-string NewStr = PrintArray(newArray);
+
 int[] res = getConvert(newArray, sizeArr);
 
 Console.WriteLine($"Размер массива: {sizeArr}\n"
-                  + $"[{NewStr}] -> "
+                  + $"[{PrintArray(newArray)}] -> "
                   + $"[{PrintArray(res)}]");
+
+Console.WriteLine("\n-------------------------------------------------------");
+
+// решение на семинаре от преподавателя (без создания нового массива)
+int[] arrNumbers = new int[5]{1, 2, 3, 4, 5};
+
+int len = arrNumbers.Length;
+
+for (int i = 0; i < len / 2; i++)
+{
+    int temp = arr[i];
+    arr[i] = arr[len - i - 1];
+    arr[len - i - 1] = temp;
+}
+
+for (int i = 0; i < len; i++)
+{
+    Console.WriteLine(arr[i]);
+}
 
 
 
