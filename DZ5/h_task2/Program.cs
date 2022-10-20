@@ -61,3 +61,5 @@ Console.Write($"В массиве: [{NewStr}] сумма элементов, "
 int res = getSunEvenNumber(newArray);
 
 Console.Write(res);
+
+

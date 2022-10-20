@@ -61,3 +61,22 @@ int res = getAnEvenNumber(newArray);
 
 Console.Write(res);
 
+// решение преподавателя на семинаре
+
+Console.WriteLine("\n------------------------");
+
+int N = 10;
+int[] arr = new int[N];
+Random rand = new Random();
+int count = 0;
+
+for (int i = 0; i < N; i++)
+{
+  arr[i] = rand.Next(100, 1000);
+  if (arr[i] % 2 == 0) 
+  {
+    count++;
+  }
+}
+
+Console.WriteLine(count);
