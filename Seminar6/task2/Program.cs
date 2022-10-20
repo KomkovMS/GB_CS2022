@@ -29,3 +29,22 @@ Console.WriteLine(num1 + " " + num2 + " " + num3);
 Console.WriteLine(answer);
 
 
+// решение на семинаре
+
+Console.WriteLine("\n------------------------------------------");
+
+int numA = new Random().Next(1, 100);
+int numB = new Random().Next(1, 100);
+int numC = new Random().Next(1, 100);
+
+Console.WriteLine(numA + " " + numB + " " + numC);
+
+bool checkA = numA < numB + numC;
+bool checkB = numB < numC + numA;
+bool checkC = numC < numA + numB;
+
+if (checkA && checkB && checkC)
+{
+    Console.WriteLine("Такой треугольник существовать может");
+}
+else Console.WriteLine("Нет");
