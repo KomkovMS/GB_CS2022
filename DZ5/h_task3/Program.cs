@@ -77,3 +77,35 @@ Console.Write($"В массиве: [{NewStr}] разница между макс
               + $"элементом массива -> ");
 
 Console.Write(res);
+
+
+// решение преподавателя на семинаре
+
+Console.WriteLine("\n----------------------------------");
+
+int N = 10;
+double[] arr = new double[N];
+Random rand = new Random();
+double diff = 0;
+
+for (int i = 0; i < N; i++)
+{
+    arr[i] = rand.Next(-100, 100);
+}
+
+double max = arr[0], min = arr[0];
+for (int i = 1; i < N; i++)
+{
+    if (arr[i] > max)
+    {
+        max = arr[i];
+    }
+
+    if (arr[i] < min)
+    {
+        min = arr[i];
+    }
+}
+
+diff = max - min;
+Console.WriteLine(diff);
