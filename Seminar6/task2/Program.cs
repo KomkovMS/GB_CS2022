@@ -1,2 +1,31 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿/*
+2. Задача 40: Напишите программу, которая принимает на вход три числа и 
+проверяет, может ли существовать треугольник с сторонами такой длины.
+
+/// Теорема о неравенстве треугольника: каждая сторона треугольника меньше 
+суммы двух других сторон ///
+
+*/
+
+// мое решение
+
+string GetAnswer(int n1, int n2, int n3, string msgPlus, string msgMinus)
+{
+    if (n1 < n2 + n3 && n2 < n3 + n1 && n3 < n1 + n2) return msgPlus;
+    else return msgMinus;
+}
+
+
+int num1 = new Random().Next(1, 100);
+int num2 = new Random().Next(1, 100);
+int num3 = new Random().Next(1, 100);
+
+string txtPlus = "Такой треугольник существовать может";
+string txtMinus = "Нет";
+
+string answer = GetAnswer(num1, num2, num3, txtPlus, txtMinus);
+
+Console.WriteLine(num1 + " " + num2 + " " + num3);
+Console.WriteLine(answer);
+
+
