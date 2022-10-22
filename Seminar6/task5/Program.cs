@@ -8,15 +8,23 @@
 
 // мое решение
 
-int[] arr = new int[7]{23, 2, 54, 47, 4, 8, 12};
-
-int[] arrNew = new int[7]; // Array.Empty<int>();
-
-for (int i = 0; i < arr.Length; i++)
+int[] GetArrCopy(int[] arr)
 {
-    arrNew[i] = arr[i];
+    int[] arrNew = new int[7];
+
+    for (int i = 0; i < arr.Length; i++)
+    {
+        arrNew[i] = arr[i];
+    }
+
+    return arrNew;
 }
 
-var str = string.Join(", ", arrNew);
+
+int[] arr = new int[7]{23, 2, 54, 47, 4, 8, 12};
+int[] arrCopy = GetArrCopy(arr);
+
+var str = string.Join(", ", arrCopy);
 
 Console.Write(str);
+
