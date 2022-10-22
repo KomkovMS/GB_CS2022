@@ -30,11 +30,11 @@ void writeFib(int n)
         Console.Write(fib2 + " ");
     }
 
-    for (int i = 0; i < n - 2; i++) {
-        sum = fib1 + fib2;
-        Console.Write(sum + " ");
-        fib1 = fib2;
-        fib2 = sum;
+    for (int i = 0; i < n - 2; i++) {   
+        sum = fib1 + fib2;              // 1  1  2  3  5  8
+        Console.Write(sum + " ");       // 1  1  2  3  5  8
+        fib1 = fib2;                    // 0  1  1  2  3  ...
+        fib2 = sum;                     // 1  1  2  3  5  ...
     }
 }
 
