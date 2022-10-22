@@ -58,3 +58,19 @@ Console.WriteLine($"{a} -> {GetBinarySystem(binarySystem)}");
 // }
 
 
+// решение от преподавателя
+
+Console.WriteLine("\n----------------");
+
+int num = 45;
+int t = 0;                 // 0
+int d = 1;                 // 1
+
+while (num != 0)
+{
+    t+= (num % 2) * d;     // 1   1   101  1101  1101   110100     
+    num /= 2;              // 22  11  5    2     1      -
+    d *= 10;               // 10  100 1000 10000 100000 -
+}
+
+Console.WriteLine(t);
