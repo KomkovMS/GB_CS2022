@@ -16,3 +16,28 @@
 f() = 
 */
 
+
+void writeFib(int n)
+{
+    int fib1 = 0;
+    int fib2 = 1;
+    int sum = 0;
+
+    if (n >= 1) {
+        Console.Write(fib1 + " ");
+    }
+    if (n >= 2) {
+        Console.Write(fib2 + " ");
+    }
+
+    for (int i = 0; i < n - 2; i++) {
+        sum = fib1 + fib2;
+        Console.Write(sum + " ");
+        fib1 = fib2;
+        fib2 = sum;
+    }
+}
+
+int N = new Random().Next(1, 10);
+Console.Write($"Усли N = {N} -> ");
+writeFib(N);
