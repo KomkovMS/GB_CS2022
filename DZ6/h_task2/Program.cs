@@ -12,6 +12,8 @@ b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
 */
 
+// мое решение
+
 string GetPoint(double b1, double k1, double b2, double k2)
 {
     double x = (b2 - b1) / (k1 - k2);
@@ -38,3 +40,18 @@ double k2 = Convert.ToDouble(Console.ReadLine());
 string point = GetPoint(b1, k1, b2, k2);
 
 Console.WriteLine($"b1 = {b1}, k1 = {k1}, b2 = {b2}, k2 = {k2} -> {point}");
+
+
+// решение на семинаре от преподавателя
+
+Console.WriteLine("\n------------------------");
+
+
+void GetCoordinates(double k1, double k2, double b1, double b2)
+{
+    double x = (b1 - b2) / (k2 - k1);
+    double y = x * k1 + b1;
+    Console.WriteLine($"({x}; {y})");
+}
+
+GetCoordinates(5, 9, 2, 4);
