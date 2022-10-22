@@ -8,6 +8,8 @@
 
 */
 
+// мое решение
+
 int[] GetArr(int n)
 {
     int[] arr = new int[n];
@@ -48,7 +50,19 @@ var str = string.Join(", ", array);
 Console.WriteLine($"Вы ввели числа: {str} -> {count}");
 
 
-    
+// решение на семинаре от преподавателя
+
+Console.WriteLine("\n------------------------");
+
+int M = Convert.ToInt32(Console.ReadLine());
+int countOfPositives = 0;
+for (int i = 0; i < M; i++)
+{
+    int digit = Convert.ToInt32(Console.ReadLine());
+    if (digit > 0) countOfPositives++;
+}
+
+Console.WriteLine("Positives: {0}", countOfPositives);
 
 
 
