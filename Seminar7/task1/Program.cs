@@ -31,11 +31,11 @@ int[,] FillArray(int[,] matr,
 }
 
 // метод, который печатает массив
-void PrintArray(int[,] matr)
+void PrintArray(int[,] matr, int m, int n)
 {
-    for (int i = 0; i < matr.GetLength(0); i++)
+    for (int i = 0; i < m; i++)     // matr.GetLength(0)
     {
-        for (int j = 0; j < matr.GetLength(1); j++)
+        for (int j = 0; j < n; j++) // matr.GetLength(1)
         {
             Console.Write($"{matr[i, j]} ");
         }
@@ -60,4 +60,4 @@ int[,] matrix = new int[m, n];
 int[,] Array = FillArray(matrix, m, n, min, max, rnd);
 
 // вызываем функцию печати матрицы
-PrintArray(Array);
+PrintArray(Array, m, n);
