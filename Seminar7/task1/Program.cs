@@ -12,11 +12,16 @@ m = 3, n = 4.
 // мое решение
 
 // метод, который будет заполнять матрицу случайными значениями
-int[,] FillArray(int[,] matr, int min, int max, Random rnd)
+int[,] FillArray(int[,] matr, 
+                 int m, 
+                 int n, 
+                 int min, 
+                 int max, 
+                 Random rnd)
 {
-    for (int i = 0; i < matr.GetLength(0); i++)
+    for (int i = 0; i < m; i++)
     {
-        for (int j = 0; j < matr.GetLength(1); j++)
+        for (int j = 0; j < n; j++)
         {
             matr[i, j] = rnd.Next(min,max);
         }
@@ -52,7 +57,7 @@ Random rnd = new Random();
 int[,] matrix = new int[m, n];
 
 // вызываем функцию, возвращающая матрицу, заполненную случайными значениями
-int[,] Array = FillArray(matrix, min, max, rnd);
+int[,] Array = FillArray(matrix, m, n, min, max, rnd);
 
 // вызываем функцию печати матрицы
 PrintArray(Array);
