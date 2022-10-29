@@ -28,3 +28,5 @@ for (int i = 0; i < lines.Length; i++)
 }
 
 System.Console.WriteLine($"a = {a}, b = {b}");
+
+File.WriteAllText("output.db", $"результат = {a * b}");
