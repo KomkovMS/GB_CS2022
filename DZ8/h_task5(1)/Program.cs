@@ -24,4 +24,30 @@
 Задача: найти M при заданном N и получить одно из разбиений на группы
 N ≤ 10²⁰
 
-*/
+*/ 
+
+
+/// ps: как я поняла в начале 8 семинара преподаватель сказал, что 
+/// в каждой группе значения не делятся друг на друга, если по такому условию:
+
+// вариант 1
+
+void BreakIntoGroups(int num)
+{
+    int count = 0;
+
+    for (int i = 1; i <= num; i++)
+    {
+        if (i == Math.Pow(2, count))                
+        {
+            Console.WriteLine();
+            count++;
+            Console.Write($"Группа {count}: ");
+        }
+            Console.Write($"{i} ");
+    }
+}
+
+int N = 50;
+
+BreakIntoGroups(N);
