@@ -1,24 +1,29 @@
-﻿// 1. Напишите программу, которая на вход принимает число и выдает его квадрат 
-// (число, умноженное на само себя)
-// Например: 4 -> 16
-//          -3 -> 9
-//          -7 -> 49
+﻿// See https://aka.ms/new-console-template for more information
+Console.WriteLine("2 Hello, World! ");
+// git init
+// dotnet new console (создать новый проект)
+// WriteLine - вывод в окно терминала
+// dotnet run (запустить проект)
  
-// мое решение
-int number = new Random().Next(-10, 10);
-Console.WriteLine("Квадрат числа " + number); // Квадрат числа -6
-number *= number;
-Console.WriteLine("равен: " + number);        // равен: 36
+// Через консоль мы обращаемся к системному терминалу
  
-// на семинаре
-Console.WriteLine("Enter the number");
-int number2 = Convert.ToInt32(Console.ReadLine()); // -6
-int quad = number2 * number2;
-Console.WriteLine(quad);                           // 36
+
+
+Console.WriteLine("Введите ваше имя");
+string username = Console.ReadLine();
+Console.WriteLine("Привет, ");
+Console.WriteLine(username);
  
-// на семинаре преподаватель
-Console.WriteLine("Enter the number");
-string input = Console.ReadLine();
-int a = Convert.ToInt32(input);
-int result = a * a;
-Console.WriteLine("Квадрат числа " + a + " = " + result);
+// Введите ваше имя
+// Maksim
+// Привет,
+// Maksim
+
+
+Console.Write("Введите ваше имя ");
+string username = Console.ReadLine();
+Console.Write("Привет, ");
+Console.Write(username);
+ 
+// Введите ваше имя Maks
+// Привет, Maks
