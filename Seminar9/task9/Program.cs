@@ -21,3 +21,17 @@ int B = 3;
 int result = Get(A, B);
 Console.WriteLine($"A = {A}; B = {B} -> {result} ({A} в {B}-й степени)");
 
+
+// решение преподавателя на семинаре
+int number = Convert.ToInt32(Console.ReadLine());
+int power = Convert.ToInt32(Console.ReadLine());
+
+int Power(int num, int pow)
+{
+    // Базовый случай
+    if (pow == 1) return num;
+    // Рекурсивный случай
+    return (num * Power(num, pow - 1));
+}
+
+Console.WriteLine(Power(number, power));
